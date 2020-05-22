@@ -3,7 +3,9 @@ const Note = require('../Note.js')
 
 const note = new Note()
 
-router.get('./public/notes.html')
+router.get('./public/notes.html', (req, res) => {
+  
+})
 
 router.post()
 
