@@ -16,12 +16,12 @@ const dbLocation = '../db/db.json'
 let noteId = 0
 
 // responds with json db
-router.get('./api/notes', (req, res) => {
+router.get('/api/notes', (req, res) => {
   console.log(req.body)
   res.json(db)
 })
 
-router.post('./api/notes', (req, res) => {
+router.post('/api/notes', (req, res) => {
   console.log(req.body)
   const title = req.body.title
   const text = req.body.text
@@ -33,11 +33,11 @@ router.post('./api/notes', (req, res) => {
 
 })
 
-router.put('./api/notes', (req, res) => {
+router.put('/api/notes', (req, res) => {
 
 })
 
-router.delete('./api/notes:id', (req, res) => {
+router.delete('/api/notes:id', (req, res) => {
   db.splice(req.param.id,1)
   // db.forEach((item) => {
   //   if (item.id === parseInt(req.param.id))
